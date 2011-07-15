@@ -1,5 +1,5 @@
-audoCompression.o: audoCompression.c
-	gcc -Wall audoCompression.c -o audioCompression.o
+audoCompression.o: audioCompression.c
+	gcc -Wall audioCompression.c -o audioCompression.o
 run:
 	./audioCompression.o
 clean:
