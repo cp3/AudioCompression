@@ -2,6 +2,14 @@
 #include <stdlib.h>
 #include <time.h>
 
+#define ADDITION_VALUE_128 224
+#define ADDITION_VALUE_64 192
+#define ADDITION_VALUE_32 160
+#define ADDITION_VALUE_16 128
+#define ADDITION_VALUE_8 96
+#define ADDITION_VALUE_4 64
+#define ADDITION_VALUE_2 32
+
 /*
 unsigned char pwlog2(unsigned char x) {
 /* pwlog2 = piecewise log2 */
@@ -59,19 +67,19 @@ unsigned char pwlog2Reverse(unsigned char x) {
 
 	//int[] lookUp = {0.0, 0.0, 1.0, 1.5, 2.0, 2.25, 2.5, 2.75, 3.0};
 	if( x >= 128)
-		return( (7<<5) + ((x-128)>>2));
+		return( (ADDITION_VALUE_128) + ((x-128)>>2));
 	if( x >= 64) 
-		return( (6<<5) + ((x-64)>>1));
+		return( (ADDITION_VALUE_64) + ((x-64)>>1));
 	if( x >= 32)
-		return( (5<<5) + (x-32));
+		return( (ADDITION_VALUE_32) + (x-32));
 	if( x >= 16)
-		return((4<<5) + ((x-16)<<1));
+		return((ADDITION_VALUE_16) + ((x-16)<<1));
 	if( x >= 8)
-		return((3<<5) + ((x-8)<<2));
+		return((ADDITION_VALUE_8) + ((x-8)<<2));
 	if( x >= 4)
-		return((2<<5) + ((x-4)<<3));
+		return((ADDITION_VALUE_4) + ((x-4)<<3));
 	if( x >= 2)
-		return((1<<5) + ((x-2)<<4));
+		return((ADDITION_VALUE_2) + ((x-2)<<4));
 	return( 0); /* error */
 
 }
