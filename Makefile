@@ -4,3 +4,5 @@ run:
 	./audioCompression.o
 clean:
 	rm -f audioCompression.o
+assembly:
+	arm-gcc -S audioCompression.c
