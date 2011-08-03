@@ -1,0 +1,12 @@
+16383 in 1759207 cycles : 107.380028078
+
+cycles without log: 1088648
+
+1759207	no LUT
+1269190	LUT with forward loop
+1252763	LUT with reverse loop
+1179145	LUT with 2x loop unrolling
+1116510 LUT with 4x loop unrolling for 16000
+1096778 LUT with 8x loop unrolling for 16000
+1088648 No LUT or function
+No LUT or function for 16000
